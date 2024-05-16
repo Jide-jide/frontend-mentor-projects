@@ -1,0 +1,167 @@
+/*variables*/
+:root {
+  --color-Very-dark-blue-main-background: hsl(233, 47%, 7%);
+  --color-Dark-desaturated-blue-card-background: hsl(246, 38%, 16%);
+  --color-Soft-violet-accent: hsl(277, 64%, 61%);
+  --color-White-main-heading-stats: hsl(0, 0%, 100%);
+  --color-Slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --color-Slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
+  --font-primary: "Inter", sans-serif;
+  --font-secondary: "Lexend Deca", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--color-Very-dark-blue-main-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 1rem;
+}
+
+.card {
+  background: var(--color-Dark-desaturated-blue-card-background);
+  display: grid;
+  border-radius: 10px;
+  max-width: 328px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 836px;
+    grid-template-rows: 0;
+  }
+}
+
+.benefits {
+  text-align: center;
+  padding: 2rem 3rem 3rem 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .benefits {
+    text-align: left;
+    grid-column: 1;
+    padding: rem;
+  }
+
+  .achievements {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.benefits-header {
+  font-family: var(--font-primary);
+  color: var(--color-White-main-heading-stats);
+  font-size: 2.9rem;
+  font-weight: 700;
+}
+
+.benefits-header>span {
+  color: var(--color-Soft-violet-accent);
+}
+
+.benefits-desc {
+  color: var(--color-Slightly-transparent-white-main-paragraph);
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.achievements {
+  text-transform: uppercase;
+}
+
+.acheivements-numbers {
+  color: var(--color-White-main-heading-stats);
+  font-size: 2.2rem;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  margin: 3rem 0 1rem 0;
+}
+
+.achievements-areas {
+  color: var(--color-Slightly-transparent-white-stat-headings);
+  font-size: 1.2rem;
+  font-family: var(--font-secondary);
+  letter-spacing: .1rem;
+  margin: 0;
+}
+
+/*image*/
+.card-image {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+  position: relative;
+  display: block;
+  background-size: cover;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-Soft-violet-accent);
+  opacity: .5;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .image-container {
+    grid-column: 2;
+  }
+
+  .card-image {
+    min-height: 350px;
+  }
+
+  .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background: var(--color-Soft-violet-accent);
+    opacity: .5;
+    display: block;
+    grid-column: 2;
+  }
+}
+
+
+.attribution {
+  padding: 10px;
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--color-Slightly-transparent-white-main-paragraph);
+}
+
+.attribution a {
+  color: white;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  color: var(--color-Soft-violet-accent);
+  transition: .3s ease-out;
+}

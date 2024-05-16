@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!--   <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <section class="newsletter-card">
+      <!-- Sign-up form start -->
+
+      <div class="newsletter-card__sign-up">
+        <div class="sign-up__image"></div>
+        <div class="sign-up__box">
+          <h1 class="sign-up__header">Stay updated!</h1>
+
+          <p class="sign-up__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <ul class="sign-up__features">
+            <li class="sign-up__feat">
+              <p>Product discovery and building what matters</p>
+            </li>
+            <li class="sign-up__feat">
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li class="sign-up__feat"><p>And much more!</p></li>
+          </ul>
+
+          <div class="sign-up__email">
+            <div class="sign-up__invalidMailbox">
+              <p>Email address</p>
+              <p class="mailInvalid">Valid Email Required</p>
+            </div>
+            <form action="">
+              <input
+                class="email"
+                type="text"
+                placeholder="email@company.com"
+              />
+            </form>
+          </div>
+
+          <button class="sign-up__btn">Subscribe to monthly newsletter</button>
+        </div>
+      </div>
+
+      <!-- Sign-up form end -->
+
+      <!-- Success message start -->
+
+      <div class="newsletter-card__success hidden">
+        <div class="success__box">
+          <div class="icon"></div>
+          <h1 class="success__header">Thanks for subscribing!</h1>
+
+          <p class="success__description">
+            A confirmation email has been sent to <b id="success__email"></b>
+            Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+        </div>
+
+        <button class="dismiss__btn">Dismiss message</button>
+      </div>
+
+      <!-- Success message end -->
+    </section>
+
+    <!--   <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

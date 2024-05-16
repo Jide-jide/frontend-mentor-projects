@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "karla";
+  src: url("../font/Karla-VariableFont_wght.ttf");
+}
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 53.6%;
+  font-family: karla;
+}
+
+body {
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 3.5rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  padding-bottom: 2.5rem;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/*box*/
+.box {
+  padding: 2.6rem 2.5rem;
+}
+
+/*header*/
+.price-grid {
+  border: 0 solid black;
+  border-radius: 5px;
+  background-color: white;
+  overflow: hidden;
+  max-width: 650px;
+}
+
+.price-grid__header h1 {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.header__call {
+  font-weight: 700;
+  color: var(--bright-yellow);
+  padding-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.header__description {
+  color: var(--grayish-blue);
+  opacity: .8
+}
+
+/*pricing*/
+.price-grid__pricing {
+  color: white;
+  background-color: var(--cyan);
+}
+
+.pricing__price {
+  display: flex;
+  align-items: center;
+}
+
+.pricing__price .price {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.pricing__price .duration {
+  opacity: .7;
+}
+
+.pricing__description {
+  font-size: 1.9rem;
+  font-weight: 300;
+}
+
+/*button*/
+.btn {
+  font-family: "karla";
+  border: 0;
+  background-color: var(--bright-yellow);
+  padding: 2rem;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: #000 0 10px 20px -15px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 3rem;
+}
+
+.btn:hover {
+  /*background-color: hsl(70, 62.2%, 49.8%);*/
+  cursor: pointer;
+  color: var(--grayish-blue);
+}
+
+/*why us*/
+.price-grid__why-us {
+  background-color: #4abebd;
+  color: white;
+}
+
+.why-us__description {
+  opacity: .8;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 800px) {
+
+  .price-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .grid2,
+  .grid3 {
+    flex: 1 1 50%;
+  }
+
+  .box {
+    padding: 4rem;
+  }
+
+  .price-grid__header h1 {
+    font-size: 3rem;
+  }
+
+  .header__call {
+    font-size: 2rem;
+  }
+
+  .header__description {
+    font-size: 1.8rem;
+    opacity: 1;
+    line-height: 1.7;
+    padding-right: 3rem;
+  }
+
+}

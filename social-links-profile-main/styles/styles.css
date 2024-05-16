@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
+
+:root {
+
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+  --primary: hsl(75, 94%, 57%);
+}
+
+html {
+  font-size: 52.6%
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--off-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "inter";
+  color: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.link-tree {
+  background-color: var(--dark-grey);
+  padding: 2.5rem;
+  width: 320px;
+  border-radius: 10px
+}
+
+.socials-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-name {
+  font-family: "inter";
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  border-radius: 50%;
+  width: 30%;
+  margin-bottom: 3rem;
+}
+
+.about-location {
+  font-size: 1.7rem;
+  margin-bottom: 3rem;
+  font-weight: 600
+}
+
+.about-bio {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem
+}
+
+.socials {
+  padding: 1.6rem 4rem;
+  background-color: var(--grey);
+  margin: 2rem 0;
+  border-radius: 10px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "inter";
+  width: 100%;
+
+  transition: all .3s;
+}
+
+.socials:last-child {
+  margin: 0;
+}
+
+.socials:hover {
+  background-color: var(--primary);
+  color: black;
+  cursor: pointer;
+}
