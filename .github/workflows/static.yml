@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './single-price-grid-component-master/index.html'
+          path: './single-price-grid-component-master'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
